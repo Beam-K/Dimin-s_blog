@@ -2,4 +2,11 @@
 }
 
 .Header {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    padding: 25px 156px;
+
 }

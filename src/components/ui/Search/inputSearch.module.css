@@ -1,0 +1,36 @@
+.Search {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 460px;
+    background-color: #f4f4f4;
+    border-radius: 6px;
+    padding: 0 6px;
+}
+
+.Search:hover {
+    background-color: #f9f9f9;
+}
+
+.Input {
+    border: none;
+    background: none;
+
+    box-shadow: none;
+    border-radius: 0;
+    padding: 10px;
+
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    width: 100%;
+}
+
+.SearchIcon {
+    padding: 6px;
+}

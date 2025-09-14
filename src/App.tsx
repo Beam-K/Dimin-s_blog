@@ -1,15 +1,15 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
 import Header from "./components/layout/Header/Header";
 
 function App() {
-  return (
-    <div className="App">
-      <Header/>
+    return (
+        <div className={styles.App}>
+            <Header/>
+            efc
 
-
-    </div>
-  );
+        </div>
+    );
 }
 
 export default App;
