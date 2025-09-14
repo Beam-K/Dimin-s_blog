@@ -3,7 +3,7 @@ import styles from './Header.module.css';
 
 import logo from "../../../assets/images/Melkov's.svg"
 import Search from "../../ui/Search/inputSearch";
-import UserUnauthorized from "../../../components/ui/UserUnauthorized/UserUnauthorized"
+import UserAuthorized from "../../../components/ui/UserAuthorized/UserAuthorized"
 
 
 function Header() {
@@ -12,7 +12,7 @@ function Header() {
             <img src={logo} className={styles.logo} alt={logo}/>
 
             <Search/>
-            <UserUnauthorized/>
+            <UserAuthorized/>
         </div>
     );
 }

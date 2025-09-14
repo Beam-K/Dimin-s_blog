@@ -1,1 +1,24 @@
 
+.UserAuthorized {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+
+}
+
+
+.UserAuthorized p {
+    font-weight: 450;
+    font-size: 14px;
+}
+
+
+.profileCircle {
+    background-color: #F3D5C5;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+}
