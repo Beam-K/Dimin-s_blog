@@ -1,0 +1,14 @@
+.sidebar {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    width: 20%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
