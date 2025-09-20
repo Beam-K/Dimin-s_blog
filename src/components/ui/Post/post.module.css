@@ -1,0 +1,12 @@
+.post {
+    display: flex;
+    background-color: white;
+
+    width: 700px;
+    height: fit-content;
+    padding: 40px;
+    border-radius: 16px;
+
+
+    box-shadow: rgba(0, 0, 0, 8%) 0 2px 4px;
+}

@@ -8,6 +8,7 @@ function Main() {
         <div className={styles.main}>
             <Sidebar/>
             <BlockOfNotes/>
+
         </div>
     );
 }

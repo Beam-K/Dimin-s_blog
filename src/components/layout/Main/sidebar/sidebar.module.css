@@ -1,14 +1,33 @@
 .sidebar {
     display: flex;
-    gap: 1rem;
     flex-direction: column;
 
-    width: 20%;
 }
 
 .nav {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+
+    width: fit-content;
+    height: 30px;
+}
+
+.nav:hover {
+    background-color: #ffffff;
+}
+
+.nav .p {
+    color: purple;
+}
+
+.menuItem {
+    width: 24px;
+    height: 24px;
 }
