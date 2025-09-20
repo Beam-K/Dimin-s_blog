@@ -1,6 +1,7 @@
 .sidebar {
     display: flex;
     flex-direction: column;
+    column-gap: 16px;
 
 }
 
@@ -10,7 +11,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     padding: 8px 20px;
     border-radius: 12px;
     font-weight: bold;
@@ -23,9 +24,10 @@
     background-color: #ffffff;
 }
 
-.nav .p {
-    color: purple;
+.nav.active {
+    background-color: #EBEBEB;
 }
+
 
 .menuItem {
     width: 24px;

@@ -6,7 +6,7 @@ function Post() {
         <div className={styles.post}>
             <header></header>
             <main className={styles.main}></main>
-            fffffffff
+            test message
             <footer></footer>
         </div>
     );
