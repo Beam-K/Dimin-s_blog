@@ -1,8 +1,15 @@
 .sidebar {
     display: flex;
-    flex-direction: column;
     column-gap: 16px;
 
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.horizontal {
+    flex-direction: row;
 }
 
 .nav {

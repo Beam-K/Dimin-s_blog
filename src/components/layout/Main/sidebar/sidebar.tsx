@@ -8,7 +8,11 @@ import traveling from "../../../../assets/icons/category/traveling.svg"
 
 import {useCategory} from "../../../../context/CategoryContext"
 
-function Sidebar() {
+interface SidebarProps {
+    orientation?: 'vertical' | 'horizontal';
+}
+
+function Sidebar({orientation = 'vertical'}: SidebarProps) {
     const {activeCategory, setActiveCategory} = useCategory();
 
     const handleCategoryClick = (category: string) => {
@@ -17,7 +21,7 @@ function Sidebar() {
 
 
     return (
-        <div className={styles.sidebar}>
+        <div className={`${styles.sidebar} ${styles[orientation]}`}>
 
             <div className={`${styles.nav} ${activeCategory === 'development' ? styles.active : ''}`}
                  onClick={() => handleCategoryClick('development')}>
