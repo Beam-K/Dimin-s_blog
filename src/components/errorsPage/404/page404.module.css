@@ -1,2 +1,26 @@
 .page404 {
+    background: #F6F6F6;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 160px;
+    overflow-x: hidden;
+
+}
+
+.nameError {
+    font-weight: bolder;
+    font-size: 160px;
+    padding-bottom: 50px;
+}
+
+.descError {
+    font-weight: bold;
+    font-size: 40px;
+    padding-bottom: 50px;
+}
+
+.desc {
+    font-size: 20px;
+    padding-bottom: 50px;
+
 }

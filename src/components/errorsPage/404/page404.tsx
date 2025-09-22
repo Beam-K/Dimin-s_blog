@@ -7,8 +7,9 @@ function page404() {
     return (
         <div className={styles.page404}>
 
-            <div> 404</div>
-            <div></div>
+            <div className={styles.nameError}>404</div>
+            <div className={styles.descError}>Такой страницы нет</div>
+            <div className={styles.desc}>Но есть много интересного здесь:</div>
             <Sidebar orientation={"horizontal"}/>
         </div>
     );
