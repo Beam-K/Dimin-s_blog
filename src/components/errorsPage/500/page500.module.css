@@ -1,0 +1,63 @@
+.page500 {
+    background: #F6F6F6;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 160px;
+    overflow-x: hidden;
+
+}
+
+.nameError {
+    font-weight: bolder;
+    font-size: 160px;
+    padding-bottom: 50px;
+}
+
+.descError {
+    font-weight: bold;
+    font-size: 40px;
+    padding-bottom: 50px;
+}
+
+.desc {
+    font-size: 20px;
+    padding-bottom: 50px;
+
+}
+
+/*  кнооооооопки  */
+.controlButton {
+    display: flex;
+    column-gap: 16px;
+
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+
+    width: fit-content;
+    height: 30px;
+}
+
+.nav:hover {
+    background-color: #ffffff;
+}
+
+.nav.active {
+    background-color: #EBEBEB;
+}
+
+
+.menuItem {
+    width: 24px;
+    height: 24px;
+}

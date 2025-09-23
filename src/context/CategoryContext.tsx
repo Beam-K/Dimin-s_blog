@@ -1,4 +1,6 @@
 import React, {createContext, useContext, useState, ReactNode} from 'react';
+import home from "../assets/icons/category/home.svg";
+import reset from "../assets/icons/category/reset.svg";
 
 interface CategoryContextType {
     activeCategory: string;
@@ -20,8 +22,12 @@ export const CategoryProvider: React.FC<CategoryProviderProps> = ({children}) =>
         development: 'Разработка',
         traveling: 'Путешествия',
         stories: 'Истории',
-        thoughts: 'Мысли'
+        thoughts: 'Мысли',
+
+        home: 'home',
+        reset: 'reset'
     };
+
 
     const value: CategoryContextType = {
         activeCategory,
