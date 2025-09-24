@@ -3,15 +3,16 @@ import styles from './page500.module.css';
 import home from "../../../assets/icons/category/home.svg";
 import reset from "../../../assets/icons/category/reset.svg";
 
-import {useCategory} from "../../../context/CategoryContext"
+const handleHomeClick = () => {
+    window.location.href = '/'; // Переход на главную
+};
 
+const handleRefreshClick = () => {
+    window.location.reload(); // Перезагрузка страницы
+};
 
 function Page500() {
-    const {activeCategory, setActiveCategory} = useCategory();
 
-    const handleCategoryClick = (category: string) => {
-        setActiveCategory(category);
-    };
 
     return (
         <div className={styles.page500}>
@@ -24,13 +25,13 @@ function Page500() {
                 </p>
             </div>
             <div className={styles.controlButton}>
-                <div className={`${styles.nav} ${activeCategory === 'home' ? styles.active : ''}`}
-                     onClick={() => handleCategoryClick('home')}>
+                <div className={styles.navi}
+                     onClick={handleHomeClick}>
                     <img src={home} className={styles.menuItem} alt="На главную"/>
                     <p>На главную</p>
                 </div>
-                <div className={`${styles.nav} ${activeCategory === 'reset' ? styles.active : ''}`}
-                     onClick={() => handleCategoryClick('reset')}>
+                <div className={styles.navi}
+                     onClick={handleRefreshClick}>
                     <img src={reset} className={styles.menuItem} alt="Обновить"/>
                     <p>Обновить страницу</p>
                 </div>
