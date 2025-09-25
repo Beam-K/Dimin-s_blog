@@ -8,6 +8,7 @@ import {CategoryProvider} from "./context/CategoryContext";
 import Page404 from "./components/errorsPage/404/page404";
 import Page500 from "./components/errorsPage/500/page500";
 
+
 function App() {
     return (<Router>
             <CategoryProvider>
