@@ -8,7 +8,7 @@ function donation() {
         <div className={styles.feedbackDonation}>
             <div className={styles.donationMain}>
                 <p className={styles.donationText}> Было полезно?</p>
-                <img src={cup} alt={"Donation"} className={styles.donationImage}/>
+                <img src={cup} alt={"donation"} className={styles.donationImage}/>
             </div>
             <div className={styles.donationButton}>
                 Отблагодарить

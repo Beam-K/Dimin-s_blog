@@ -1,0 +1,94 @@
+.promo {
+    background-color: white;
+    padding: 14px;
+    margin-left: 25px;
+
+    height: fit-content;
+    width: fit-content;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.promoHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.shellLogo {
+    background-color: #CABCDF;
+    border-radius: 8px;
+    height: 48px;
+    width: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.marking {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #F6F6F6;
+
+    height: fit-content;
+    border-radius: 8px;
+    padding: 3px 10px;
+
+
+    font-size: 8px;
+    color: #717171;
+    line-height: 120%;
+
+}
+
+
+.logo {
+    background-color: #764824;
+    padding: 16px;
+    margin: 16px;
+
+
+}
+
+
+.promoMain {
+    border-radius: 8px;
+
+}
+
+.headerBlock {
+    font-size: 18px;
+    align-items: flex-start;
+    display: flex;
+
+}
+
+.descriptionBlock {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+
+.promoButton {
+    background-color: #F6F6F6;
+    border-radius: 8px;
+
+    margin-top: 10px;
+    padding: 4px 20px;
+
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 600;
+
+}
+
+.promoButton:hover {
+    background-color: #EAEAEA;
+}

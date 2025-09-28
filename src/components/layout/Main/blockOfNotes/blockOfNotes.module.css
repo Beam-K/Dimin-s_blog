@@ -5,3 +5,16 @@
 
     align-items: flex-start;
 }
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: start;
+}
+
+.posts {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}

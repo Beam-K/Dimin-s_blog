@@ -1,9 +1,30 @@
 .main {
     padding: 25px 156px;
 
-    height: calc(100vh - 95px);
+    height: 100%;
 
-    display: flex;
     flex-direction: row;
     gap: 16px;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Sidebar | BlockOfNotes | Promo */
+    grid-template-rows: auto 1fr; /* Заголовок | Контент */
+
+    background-color: #F6F6F6;
+
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 1 / span 2; /* Занимает всю высоту */
+}
+
+.blockOfNotes {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.promo {
+    grid-column: 3;
+    grid-row: 1; /* Только первая строка - на уровне заголовка */
 }
