@@ -1,0 +1,43 @@
+.feedbackDonation {
+    background-color: white;
+    padding: 14px;
+    margin: 25px;
+
+    height: fit-content;
+
+    border-radius: 16px;
+}
+
+.donationMain {
+    background-color: #ECD6C5;
+    border-radius: 8px;
+
+    padding: 20px 15px;
+
+
+}
+
+.donationText {
+    color: #764824;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.donationButton {
+    background-color: #F6F6F6;
+    border-radius: 8px;
+
+    margin-top: 10px;
+    padding: 4px 20px;
+
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 600;
+
+}
+
+.donationButton:hover {
+    background-color: #EAEAEA;
+}

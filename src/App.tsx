@@ -8,6 +8,8 @@ import {CategoryProvider} from "./context/CategoryContext";
 import Page404 from "./components/errorsPage/404/page404";
 import Page500 from "./components/errorsPage/500/page500";
 
+import Donation from "./components/ui/donation/donation";
+
 
 function App() {
     return (<Router>
@@ -15,22 +17,25 @@ function App() {
 
                 <div className={styles.App}>
                     <Routes>
-                        {/* Главная страница */}
+
                         <Route path="/" element={
                             <>
                                 <Header/>
                                 <Main/>
                             </>
                         }/>
+                        <Route path="don" element={<Donation/>}/>
 
-                        {/* Страница 404 */}
+
                         <Route path="/404" element={<Page404/>}/>
 
-                        {/* Страница 500 */}
+
                         <Route path="/500" element={<Page500/>}/>
 
-                        {/* Любой другой путь ведет на 404 */}
+
                         <Route path="*" element={<Page404/>}/>
+
+
                     </Routes>
                 </div>
 
