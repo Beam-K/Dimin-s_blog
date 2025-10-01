@@ -1,13 +1,15 @@
-import React, {createContext, useContext, useState, ReactNode, useEffect} from 'react';
-import {useNavigate, useLocation} from 'react-router-dom';
+import React, {createContext, useContext, useState, ReactNode} from 'react';
 
+// Интерфейс ДО компонента
 interface CategoryContextType {
     activeCategory: string;
     setActiveCategory: (category: string) => void;
-    navigateToCategory: (category: string) => void;
+    currentArticle: string | null;
+    setCurrentArticle: (slug: string | null) => void;
     categories: Record<string, string>;
 }
 
+// Экспорт ДО компонента
 export const CategoryContext = createContext<CategoryContextType | undefined>(undefined);
 
 interface CategoryProviderProps {
@@ -16,8 +18,7 @@ interface CategoryProviderProps {
 
 export const CategoryProvider: React.FC<CategoryProviderProps> = ({children}) => {
     const [activeCategory, setActiveCategory] = useState('all');
-    const navigate = useNavigate();
-    const location = useLocation();
+    const [currentArticle, setCurrentArticle] = useState<string | null>(null);
 
     const categories = {
         all: 'Все статьи',
@@ -27,29 +28,11 @@ export const CategoryProvider: React.FC<CategoryProviderProps> = ({children}) =>
         thoughts: 'Мысли',
     };
 
-    // Синхронизация категории с URL
-    useEffect(() => {
-        // Если мы на главной - ничего не делаем
-        if (location.pathname === '/') return;
-
-        // Если перешли на страницу ошибки - сбрасываем категорию
-        setActiveCategory('all');
-    }, [location]);
-
-    // Новая функция для навигации
-    const navigateToCategory = (category: string) => {
-        setActiveCategory(category);
-
-        // Если не на главной - переходим на главную с выбранной категорией
-        if (location.pathname !== '/') {
-            navigate('/');
-        }
-    };
-
     const value: CategoryContextType = {
         activeCategory,
         setActiveCategory,
-        navigateToCategory,
+        currentArticle,
+        setCurrentArticle,
         categories
     };
 

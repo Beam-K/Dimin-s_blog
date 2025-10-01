@@ -11,30 +11,33 @@ interface SidebarProps {
 }
 
 function Sidebar({orientation = 'vertical'}: SidebarProps) {
-    const {activeCategory, navigateToCategory} = useCategory();
+    const {activeCategory, setActiveCategory} = useCategory();
 
+    const handleCategoryClick = (category: string) => {
+        setActiveCategory(category);
+    };
     return (
         <div className={`${styles.sidebar} ${styles[orientation]}`}>
             <div className={`${styles.nav} ${activeCategory === 'development' ? styles.active : ''}`}
-                 onClick={() => navigateToCategory('development')}>
+                 onClick={() => handleCategoryClick('development')}>
                 <img src={development} className={styles.menuItem} alt="Разработка"/>
                 <p>Разработка</p>
             </div>
 
             <div className={`${styles.nav} ${activeCategory === 'traveling' ? styles.active : ''}`}
-                 onClick={() => navigateToCategory('traveling')}>
+                 onClick={() => handleCategoryClick('traveling')}>
                 <img src={traveling} className={styles.menuItem} alt="Путешествия"/>
                 <p>Путешествия</p>
             </div>
 
             <div className={`${styles.nav} ${activeCategory === 'stories' ? styles.active : ''}`}
-                 onClick={() => navigateToCategory('stories')}>
+                 onClick={() => handleCategoryClick('stories')}>
                 <img src={stories} className={styles.menuItem} alt="Истории"/>
                 <p>Истории</p>
             </div>
 
             <div className={`${styles.nav} ${activeCategory === 'thoughts' ? styles.active : ''}`}
-                 onClick={() => navigateToCategory('thoughts')}>
+                 onClick={() => handleCategoryClick('thoughts')}>
                 <img src={thoughts} className={styles.menuItem} alt="Мысли"/>
                 <p>Мысли</p>
             </div>
