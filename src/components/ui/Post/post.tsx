@@ -9,9 +9,7 @@ interface PostProps {
 function Post({title, onClick}: PostProps) {
     return (
         <div className={styles.post}>
-            <header className={styles.post} onClick={onClick}> {title}</header>
-            <main className={styles.main}></main>
-            test message
+            <header onClick={onClick}> {title}</header>
             <footer></footer>
         </div>
     );

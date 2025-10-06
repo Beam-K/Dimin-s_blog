@@ -20,7 +20,6 @@ function BlockOfNotes() {
         thoughts: ['philosophy']
     };
 
-    // Если открыта статья - показываем её
     if (currentArticle) {
         return (
             <div className={styles.articleContainer}>
@@ -35,7 +34,6 @@ function BlockOfNotes() {
         );
     }
 
-    // Иначе показываем список статей
     return (
         <div className={styles.blockOfNotes}>
             <header>
