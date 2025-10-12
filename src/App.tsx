@@ -9,6 +9,7 @@ import Page404 from "./components/errorsPage/404/page404";
 import Page500 from "./components/errorsPage/500/page500";
 
 import Donation from "./components/ui/donation/donation";
+import AuthorizationWindow from "./components/layout/authorizationWindow/authorizationWindow";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 
 
                         <Route path="/500" element={<Page500/>}/>
+                        <Route path="/author" element={<AuthorizationWindow/>}/>
 
 
                         <Route path="*" element={<Page404/>}/>

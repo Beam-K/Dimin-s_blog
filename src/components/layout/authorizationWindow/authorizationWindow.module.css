@@ -1,0 +1,164 @@
+.authorizationWindow {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #C4C4C4;
+}
+
+.shellPage {
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.closeBut {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header {
+    font-size: 26px;
+}
+
+.userInputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.shellContent {
+    padding: 0 35px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.userInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Input {
+    display: flex;
+    height: 24px;
+    border-radius: 12px;
+    border: #F9F9F9 solid 1px;
+    background-color: #F9F9F9;
+    padding: 13px 18px;
+    color: black;
+
+}
+
+.Input:focus {
+    outline: none;
+    border: #E6E6E6 solid 1px;
+    background-color: white;
+}
+
+.Input::placeholder {
+    color: #000;
+    font-size: 14px;
+    font-weight: 530;
+}
+
+.Input:focus::placeholder {
+    color: transparent;
+    opacity: 0;
+}
+
+.loginBut {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #E1E1E1;
+    padding: 13px 0;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.loginBut:hover {
+    background-color: #ededed;
+}
+
+
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    cursor: pointer;
+
+}
+
+.hiddenInput {
+    display: none;
+}
+
+.customCheckbox {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.customCheckbox.checked {
+    border-color: #000000;
+}
+
+.customCheckbox.checked::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #000000;
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    display: flex;
+    font-size: 12px;
+}
+
+
+.socialAuth {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.socialButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.socialButton {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background: none;
+    border: 2px solid #E6E6E6;
+    border-radius: 12px;
+
+    padding: 17px 13px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.socialButton:hover {
+    background-color: #F9F9F9;
+}
