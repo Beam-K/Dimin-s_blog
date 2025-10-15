@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './UserAuthorized.module.css';
+import {useUser} from '../../../context/UserContext';
 
-function UserAuthorized({userName = "Саша Иванова "}) {
+function UserAuthorized() {
+    const {userName} = useUser();
     const firstLetter = userName ? userName.charAt(0).toUpperCase() : '';
 
     return (
@@ -9,7 +11,6 @@ function UserAuthorized({userName = "Саша Иванова "}) {
             <div className={styles.profileCircle}>
                 <p>{firstLetter}</p>
             </div>
-
             <div className={styles.UserName}>
                 <p>{userName}</p>
             </div>

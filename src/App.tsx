@@ -5,6 +5,7 @@ import styles from './App.module.css';
 import Header from "./components/layout/Header/Header";
 import Main from "./components/layout/Main/main";
 import {CategoryProvider} from "./context/CategoryContext";
+import {UserProvider} from "./context/UserContext";
 import Page404 from "./components/errorsPage/404/page404";
 import Page500 from "./components/errorsPage/500/page500";
 
@@ -13,36 +14,37 @@ import AuthorizationWindow from "./components/layout/authorizationWindow/authori
 
 
 function App() {
-    return (<Router>
-            <CategoryProvider>
+    return (
+        <UserProvider>
+            <Router>
+                <CategoryProvider>
 
-                <div className={styles.App}>
-                    <Routes>
-
-                        <Route path="/" element={
-                            <>
-                                <Header/>
-                                <Main/>
-                            </>
-                        }/>
-                        <Route path="don" element={<Donation/>}/>
-
-
-                        <Route path="/404" element={<Page404/>}/>
+                    <div className={styles.App}>
+                        <Routes>
+                            <Route path="/" element={
+                                <>
+                                    <Header/>
+                                    <Main/>
+                                </>
+                            }/>
+                            <Route path="don" element={<Donation/>}/>
 
 
-                        <Route path="/500" element={<Page500/>}/>
-                        <Route path="/author" element={<AuthorizationWindow/>}/>
+                            <Route path="/404" element={<Page404/>}/>
 
 
-                        <Route path="*" element={<Page404/>}/>
+                            <Route path="/500" element={<Page500/>}/>
+                            <Route path="/author" element={<AuthorizationWindow/>}/>
+
+                            <Route path="*" element={<Page404/>}/>
 
 
-                    </Routes>
-                </div>
+                        </Routes>
+                    </div>
 
-            </CategoryProvider>
-        </Router>
+                </CategoryProvider>
+            </Router>
+        </UserProvider>
     );
 }
 

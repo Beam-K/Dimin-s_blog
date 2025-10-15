@@ -1,21 +1,53 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import styles from './authorizationWindow.module.css';
 import exit from "../../../assets/icons/exit.svg"
 import vk from "../../../assets/icons/socialIcon/vk.svg"
 import google from "../../../assets/icons/socialIcon/google.svg"
 import yandex from "../../../assets/icons/socialIcon/yandex.svg"
 
+import {useUser} from '../../../context/UserContext';
+
+
 function AuthorizationWindow() {
+
     const [isChecked, setIsChecked] = useState(false);
-    const [name, setName] = useState('');
+    const {login} = useUser();
+    const {userName, setUserName} = useUser();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    const handleClose = () => {
+        navigate(-1);
+    };
+
+    const handleLogin = () => {
+        if (!userName.trim() || !email.trim() || !password.trim()) {
+            alert('Пожалуйста, заполните все поля');
+            return;
+        }
+
+        if (!isChecked) {
+            alert('Необходимо согласие с правилами');
+            return;
+        }
+
+        login({
+            name: userName.trim(),
+            email: email.trim()
+        });
+
+        navigate('/');
+    };
 
     return (
+
+
         <div className={styles.authorizationWindow}>
             <div className={styles.shellPage}>
                 <div className={styles.closeBut}>
-                    <img src={exit} alt="Закрыть"/>
+                    <img src={exit} alt="Закрыть" onClick={handleClose}/>
                 </div>
                 <div className={styles.shellContent}>
                     <div className={styles.header}>
@@ -26,8 +58,8 @@ function AuthorizationWindow() {
                             className={styles.Input}
                             placeholder="Имя и фамилия"
                             type="text"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            value={userName}
+                            onChange={(e) => setUserName(e.target.value)}
                         />
                         <input
                             className={styles.Input}
@@ -43,7 +75,7 @@ function AuthorizationWindow() {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
-                        <div className={styles.loginBut}>
+                        <div className={styles.loginBut} onClick={handleLogin}>
                             Войти
                         </div>
                     </div>
