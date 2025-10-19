@@ -1,0 +1,38 @@
+.footer {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px 156px;
+
+}
+
+.iconForFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.tg {
+    display: flex;
+    width: 60px;
+    height: 60px;
+}
+
+.linkForFooter {
+    color: #000000 !important;
+    text-decoration: none !important;
+    font-weight: bold;
+
+}
+
+.linkForFooter:visited,
+.linkForFooter:active {
+    color: #000000 !important;
+    text-decoration: none !important;
+    font-weight: bold;
+}
+

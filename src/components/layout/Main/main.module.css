@@ -1,22 +1,23 @@
 .main {
     padding: 25px 156px;
 
-    height: 100%;
+    height: 100vh;
 
     flex-direction: row;
     gap: 16px;
 
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Sidebar | BlockOfNotes | Promo */
-    grid-template-rows: auto 1fr; /* Заголовок | Контент */
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr;
 
     background-color: #F6F6F6;
 
+    flex: 1;
 }
 
 .sidebar {
     grid-column: 1;
-    grid-row: 1 / span 2; /* Занимает всю высоту */
+    grid-row: 1 / span 2;
 }
 
 .blockOfNotes {
@@ -26,5 +27,5 @@
 
 .promo {
     grid-column: 3;
-    grid-row: 1; /* Только первая строка - на уровне заголовка */
+    grid-row: 1;
 }

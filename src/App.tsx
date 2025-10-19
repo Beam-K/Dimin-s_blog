@@ -11,6 +11,7 @@ import Page500 from "./components/errorsPage/500/page500";
 
 import Donation from "./components/ui/donation/donation";
 import AuthorizationWindow from "./components/layout/authorizationWindow/authorizationWindow";
+import Footer from "./components/layout/Footer/Footer";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                                 <>
                                     <Header/>
                                     <Main/>
+                                    <Footer/>
                                 </>
                             }/>
                             <Route path="don" element={<Donation/>}/>
