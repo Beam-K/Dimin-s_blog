@@ -8,7 +8,7 @@ function UserUnauthorized() {
     return (
         <div className={styles.UserUnauthorized}>
             <img src={UserIcon} alt={UserIcon} className={styles.UserIcon}/>
-            <p>Аккаунт</p>
+            <p className={styles.txt}>Аккаунт</p>
         </div>
     );
 }

@@ -15,9 +15,18 @@
     background-color: #d6d6d6;
 }
 
-.UserUnauthorized p {
+.txt {
     font-weight: 450;
     font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.txt:visited {
+    font-weight: 450;
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
 }
 
 .UserUnauthorized img {
