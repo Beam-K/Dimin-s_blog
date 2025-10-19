@@ -1,18 +1,18 @@
 import React from 'react';
 import styles from './Header.module.css';
-import logo from "../../../assets/images/Melkov's.svg"
+import Logo from "../../../components/ui/Logo/logo"
 import Search from "../../ui/Search/inputSearch";
 import UserAuthorized from "../../../components/ui/UserAuthorized/UserAuthorized"
 import UserUnauthorized from "../../ui/UserUnauthorized/UserUnauthorized";
 import {Link} from 'react-router-dom';
-import {useUser} from '../../../context/UserContext'; // Добавляем хук
+import {useUser} from '../../../context/UserContext';
 
 function Header() {
     const {isAuthorized} = useUser();
 
     return (
         <div className={styles.Header}>
-            <img src={logo} className={styles.logo} alt="Logo"/>
+            <Logo/>
             <Search/>
 
 
