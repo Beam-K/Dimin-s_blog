@@ -10,7 +10,9 @@ function Post({title, onClick}: PostProps) {
     return (
         <div className={styles.post}>
             <header onClick={onClick}> {title}</header>
-            <footer></footer>
+            <footer>
+                
+            </footer>
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './promo.module.css';
 
-import logo from "../../../assets/images/logo.svg"
+import logo from "../../../assets/images/logoPromo.svg"
 
 function Promo() {
     return (

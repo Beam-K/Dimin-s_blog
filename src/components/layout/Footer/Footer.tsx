@@ -10,22 +10,6 @@ function Footer() {
     return (
         <div className={styles.footer}>
 
-            <div className={styles.iconForFooter}>
-                <Link to="https://t.me/melkovdev">
-                    <img src={tg} alt="tg" className={styles.tg}/>
-                </Link>
-                <Link to="https://github.com/mlkvs">
-                    <img src={githab} alt="githab" className={styles.tg}/>
-                </Link>
-
-
-            </div>
-            <div className={styles.linkForFooter}>
-                <Link to='https://t.me/mrrebrik_user' className={styles.linkForFooter}>
-                    @melkov
-                </Link>
-            </div>
-
 
         </div>
     );

@@ -14,7 +14,7 @@ function BlockOfNotes() {
     const {activeCategory, categories, currentArticle, setCurrentArticle} = useCategory();
     // Временные данные статей
     const articles: ArticlesMap = {
-        development: ['test', 'react-guide'],
+        development: ['test'],
         traveling: ['travel-tips'],
         stories: ['my-story'],
         thoughts: ['philosophy']
